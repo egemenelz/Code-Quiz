@@ -1,12 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Code Quiz</title>
 </head>
+
 <body>
-    
+    <header>
+        <a href="result.html" id="highscores" class="btn btn-primary btn-sm ms-3 mt-3">View Highscores</a>
+
+        <span style="float: right;">Timer: <span id="timer">75<span></span>
+    </header>
+    <!--Quiz Introduction Card-->
+    <section id="start-card" class="quiz-card card mx-auto" style="width: 750px;">
+        <div class="card-header">
+            <h1 class="text-center">Marvel Quiz Challenge</h1>
+        </div>
+        <p class="p-3">
+            Welcome to Marvel Quiz!
+            Welcome to one of the greatest social quiz games in the galaxy. It is fast-paced, free and even more fun
+            than zero gravity!
+        </p>
+        <button id="start-button" class="btn btn-primary">Start Quiz</button>
+    </section>
+    <!--Quiz Questions-->
+
+
+    <div id="first-question" class="quiz-card card mx-auto" style="width: 750px; margin-left: 550px; ">
+        <div class="card-body">
+            <div class="card-header">
+                <h1 class="text-center">How many Infinity Stones are there?</h1>
+            </div>
+
+            <ol class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <input type="radio" id="question1-1" name="answer" value="false">
+                    <label for="question1-1">Five</label>
+                </li>
+                <li class="list-group-item">
+                    <input type="radio" id="question1-2" name="answer" value="false">
+                    <label for="question1-2">Four</label>
+                </li>
+                <li class="list-group-item">
+                    <input type="radio" id="question1-3" name="answer" value="false">
+                    <label for="question1-3">Three</label>
+                </li>
+                <li class="list-group-item">
+                    <input type="radio" id="question1-4" name="answer" value="true">
+                    <label for="question1-4">Six</label>
+                </li>
+            </ol>
+            <hr>
+            <div>
+                <button id="first-button" class="next-button btn btn-primary">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <div  id="second-question" class="quiz-card card mx-auto" style="width: 750px;  margin-left: 550px;">
+        <div class="card-body">
+            <div class="card-header">
+                <h1 class="text-center">Where is Captain America from?</h1>
+            </div>
+        </div>
+
+        <ol class="list-group list-group-flush">
+            <li class="list-group-item">
+                <input type="radio" id="question1-1" name="answer" value="true">
+                <label for="question2-1">Brooklyn</label>
+            </li>
+            <li class="list-group-item">
+                <input type="radio" id="question1-2" name="answer" value="false">
+                <label for="question2-2">Queens</label>
+            </li>
+            <li class="list-group-item">
+                <input type="radio" id="question1-3" name="answer" value="false">
+                <label for="question2-3">Manhattan</label>
+            </li>
+            <li class="list-group-item">
+                <input type="radio" id="question1-4" name="answer" value="false">
+                <label for="question2-4">Miami</label>
+            </li>
+        </ol>
+        <hr>
+        <div>
+            <button id="second-button" class="next-button btn btn-primary">Next</button>
+            <span id="result-first" class="result-footer"></span>
+        </div>
+    </div>
+
+
+    <div id="third-question" class="quiz-card card mx-auto" style="width: 750px;  margin-left: 550px;">
+        <div class="card-body">
+            <div class="card-header">
+                <h1 class="text-center">Who is Tony Stark’s father?</h1>
+            </div>
+        </div>
+
+        <ol class="list-group list-group-flush">
+            <li class="list-group-item">
+                <input type="radio" id="question1-1" name="answer" value="false">
+                <label for="question3-1">Tony Stark</label>
+            </li>
+            <li class="list-group-item">
+                <input type="radio" id="question1-2" name="answer" value="false">
+                <label for="question3-2">Sharon Stark</label>
+            </li>
+            <li class="list-group-item">
+                <input type="radio" id="question1-3" name="answer" value="false">
+                <label for="question3-3">Peggy Stark</label>
+            </li>
+            <li class="list-group-item">
+                <input type="radio" id="question1-4" name="answer" value="true">
+                <label for="question3-4">Howard Stark</label>
+            </li>
+        </ol>
+        <hr>
+        <div>
+            <button id="third-button" class="next-button btn btn-primary">Next</button>
+            <span id="result-second" class="result-footer"></span>
+        </div>
+    </div>
+
+    <div  id="fourth-question" class="quiz-card card mx-auto" style="width: 750px;  margin-left: 550px;">
+        <div class="card-body">
+            <div class="card-header">
+                <h1 class="text-center">Who was able to pick up Thor’s hammer in Endgame?</h1>
+            </div>
+        </div>
+
+        <ol class="list-group list-group-flush">
+            <li class="list-group-item">
+                <input type="radio" name="answer" value="false">
+                <label for="question4-1">Tony Stark</label>
+            </li>
+            <li class="list-group-item">
+                <input type="radio" name="answer" value="true">
+                <label for="question4-2">Captain America</label>
+            </li>
+            <li class="list-group-item">
+                <input type="radio" name="answer" value="false">
+                <label for="question4-3">Hulk</label>
+            </li>
+            <li class="list-group-item">
+                <input type="radio" name="answer" value="false">
+                <label for="question4-4">You</label>
+            </li>
+        </ol>
+        <hr>
+        <div>
+            <button id="fourth-button" class="next-button btn btn-primary">Next</button>
+            <span id="result-third" class="result-footer"></span>
+        </div>
+    </div>
+
+    <div  id="fifth-question" class="quiz-card card mx-auto" style="width: 750px;  margin-left: 550px;" >
+        <div class="card-body">
+            <div class="card-header">
+                <h1 class="text-center">Wanda and her brother Pietro are from where?</h1>
+            </div>
+        </div>
+
+        <ol class="list-group list-group-flush">
+            <li class="list-group-item">
+                <input type="radio" name="answer" value="false">
+                <label for="question5-1">Turkey</label>
+            </li>
+            <li class="list-group-item">
+                <input type="radio" name="answer" value="">
+                <label for="question5-2">USA</label>
+            </li>
+            <li class="list-group-item">
+                <input type="radio" name="answer" value="true">
+                <label for="question5-3">Sokovia</label>
+            </li>
+            <li class="list-group-item">
+                <input type="radio" name="answer" value="false">
+                <label for="question5-4">Wakanda</label>
+            </li>
+        </ol>
+        <hr>
+        <div>
+            <button id="fifth-button" class="next-button btn btn-primary">Next</button>
+            <span id="result-fourth" class="result-footer"></span>
+        </div>
+    </div>
+
+    <!--Quiz Result Card-->
+    <section id="result-card" class="quiz-card card mx-auto" style="width: 750px;  margin-left: 550px;">
+        <div class="card-header">
+            <h1 class="text-center">Your Result!</h1>
+        </div>
+        <p id="final-result"></p>
+        <label for="user-initials">Enter your initials</label>
+        <input type="text" id="user-initials">
+        <button id="save-button" class="next-button btn btn-primary">Save Score</button>
+    </section>
+
+
+    <script src="./assets/logic.js"></script>
+
 </body>
+
 </html>

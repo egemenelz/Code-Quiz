@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highscores</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <main>
+        <button id="home-button" class="btn btn-primary btn-sm" onclick="dashboard()">Go Back to Home Page</button>
+        <button id="clear-button" class="btn btn-primary ms-3 btn-sm" onclick="clearEntries()">Clear Last Entry</button>
+
+
+        <div id="high-score-list" class="card mx-auto quiz-card" style="width: 750px;  margin-left: 550px;">
+            <div class="card-body">
+                <div class="card-header">
+                    <h1>Highscores</h1>
+                </div>
+            </div>
+            <ol id="users-scores" class="list-group list-group-flush">
+
+            </ol>
+        </div>
+    </main>
+
+    <script>
+        function dashboard() {
+            window.location.assign('index.html');
+        }
+
+        function clearEntries() {
+            var list = document.getElementById('users-scores');
+            list.removeChild(list.lastChild);
+
+            var scoreArray = JSON.parse(localStorage.getItem('highscores'));
+            scoreArray.pop();
+            localStorage.setItem('highscores', JSON.stringify(scoreArray));
+        }
+
+
+        var highScoresArray = JSON.parse(localStorage.getItem('highscores'));
+        highScoresArray.forEach(function (user) {
+            var newListEl = document.createElement('li');
+            newListEl.className = "list-group-item";
+            newListEl.textContent = `${user.initials} - ${user.highscore}`;
+            document.getElementById('users-scores').append(newListEl);
+        })
+    </script>
+
+</body>
+
+</html>
