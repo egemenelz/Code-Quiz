@@ -1,4 +1,5 @@
-# Web APIs: Marvel Quiz
+# Marvel Quiz
+<img src="./assets/images/marvelQuiz.gif" alt="Project Image" width="900px"/>
 
 This project includes codes for Marvel Quiz. The user needs to click to start button to start the game. And then will face 5 different questions about Marvel. If the user selects the correct answer, the game will rewarded with +10 seconds otherwise the game will reduce -5 seconds.
 
